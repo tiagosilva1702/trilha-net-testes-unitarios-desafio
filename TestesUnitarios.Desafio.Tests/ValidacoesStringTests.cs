@@ -6,6 +6,9 @@ public class ValidacoesStringTests
 {
     private ValidacoesString _validacoes = new ValidacoesString();
 
+    /// <summary>
+    /// Ao passar um texto escrito a palavra "Matrix", deve retornar o número 6, representando 6 caracteres presentes na palavra
+    /// </summary>
     [Fact]
     public void DeveRetornar6QuantidadeCaracteresDaPalavraMatrix()
     {
@@ -22,6 +25,9 @@ public class ValidacoesStringTests
         Assert.Equal(resultadoEsperado, resultado);
     }
 
+    /// <summary>
+    /// Ao passar um texto escrito "Esse é um texto qualquer" e procurar pela palavra "qualquer", deve retornar verdadeiro pois a palavra existe no texto
+    /// </summary>
     [Fact]
     public void DeveContemAPalavraQualquerNoTexto()
     {
@@ -38,6 +44,9 @@ public class ValidacoesStringTests
         Assert.True(true);
     }
 
+    /// <summary>
+    /// Ao passar um texto escrito "Esse é um texto qualquer" e procurar pela palavra "teste", deve retornar falso pois a palavra não existe no texto
+    /// </summary>
     [Fact]
     public void NaoDeveConterAPalavraTesteNoTexto()
     {
@@ -53,6 +62,9 @@ public class ValidacoesStringTests
         Assert.False(resultado);
     }
 
+    /// <summary>
+    /// Ao passar um texto escrito "Começo, meio e fim do texto procurado" e procurar pela palavra "procurado", deve retornar verdadeiro pois a palavra existe no texto e está inclusa no final do texto
+    /// </summary>
     [Fact]
     public void TextoDeveTerminarComAPalavraProcurado()
     {
