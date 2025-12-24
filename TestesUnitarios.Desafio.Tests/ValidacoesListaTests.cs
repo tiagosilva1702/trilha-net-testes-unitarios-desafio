@@ -7,6 +7,9 @@ public class ValidacoesListaTests
 {
     private ValidacoesLista _validacoes = new ValidacoesLista();
     
+    /// <summary>
+    /// Ao passar uma lista com diversos números, incluindo positivos e negativos, deve ser retornado uma nova lista apenas com números positivos
+    /// </summary>
     [Fact]
     public void DeveRemoverNumerosNegativosDeUmaLista()
     {
@@ -21,6 +24,9 @@ public class ValidacoesListaTests
         Assert.Equal(resultadoEsperado, resultado);
     }
 
+    /// <summary>
+    /// Ao passar uma lista com diversos números, incluindo o número 9, deve retornar verdadeiro, pois encontrou o 9 na lista
+    /// </summary>
     [Fact]
     public void DeveConterONumero9NaLista()
     {
@@ -35,6 +41,9 @@ public class ValidacoesListaTests
         Assert.True(resultado);
     }
 
+    /// <summary>
+    /// Ao passar uma lista com diversos números, mas sem o número 10, deve retornar falso, pois não encontrou o 10 na lista
+    /// </summary>
     [Fact]
     public void NaoDeveConterONumero10NaLista()
     {
@@ -51,6 +60,9 @@ public class ValidacoesListaTests
         Assert.False(resultado);
     }
 
+    /// <summary>
+    /// Ao passar uma lista de inteiros, deve retornar uma nova lista, com todos os elementos da lista multiplicados por 2
+    /// </summary>
     [Fact]
     public void DeveMultiplicarOsElementosDaListaPor2()
     {
@@ -67,6 +79,9 @@ public class ValidacoesListaTests
         Assert.Equal(resultadoEsperado, resultado);
     }
 
+    /// <summary>
+    /// Ao passar uma lista de números inteiros, sendo o maior deles 9, deve retornar o 9 como maior elemento dentro dessa lista
+    /// </summary>
     [Fact]
     public void DeveRetornar9ComoMaiorNumeroDaLista()
     {
@@ -83,6 +98,9 @@ public class ValidacoesListaTests
         Assert.Equal(9, resultado);
     }
 
+    /// <summary>
+    /// Ao passar uma lista de números inteiros, sendo o menor deles -8, deve retornar o -8 como menor elemento dentro dessa lista
+    /// </summary>
     [Fact]
     public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
